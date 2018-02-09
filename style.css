@@ -1,0 +1,21 @@
+html,body{
+	width:100%;
+	min-height:100%;
+	padding=0;
+	margin:0;
+}
+section
+{
+	text-align:center;
+	padding:200px 0;
+}
+#slide
+{
+	position:relative;
+	width:320px;
+}
+#slide img
+{
+	float:left;
+}
+	

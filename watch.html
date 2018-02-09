@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Watch Zone</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<style>
+	a1{
+	position:relative;
+	width:300px;
+	height:300px;
+	text-decoration:none;
+	text-align:center;
+	line-height:50px;
+	display:inline-block;
+	font-size:24px;
+	color:#0D1D8;
+	}
+	a1:before
+	{
+	content:'';
+	position:absolute;
+	top:-2px;
+	left:-2px;
+	width:0;
+	height:0;
+	background:transparent;
+	border:5px solid transparent;
+	}
+	a1:hover:before
+	{
+	animation: animate 1s linear forwards;
+	}
+	@keyframes animate
+	{
+	0%
+	{
+	width:0;
+	height:0;
+	border-top-color: #932263;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	}
+	50%
+	{
+	width:100%;
+	height:0;
+	border-top-color: #932263;
+	border-right-color: #932263;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	}
+	100%
+	{
+	width:100%;
+	height:100%;
+	border-top-color: #932263;
+	border-right-color: #932263;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	}
+	}
+	a1:after
+	{
+	content:'';
+	position:absolute;
+	top:-2px;
+	left:-2px;
+	width:0;
+	height:0;
+	background:transparent;
+	border:5px solid transparent;
+	}
+	a1:hover:after
+	{
+	animation: animate2 1s linear forwards;
+	animation-delay:1s;
+	}
+	@keyframes animate2
+	{
+	0%
+	{
+	width:0;
+	height:0;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: #932263;
+	}
+	50%
+	{
+	width:0;
+	height:100%;
+	border-top-color:transparent;
+	border-right-color: transparent;
+	border-bottom-color: #932263;
+	border-left-color: #932263;
+	}
+	100%
+	{
+	width:100%;
+	height:100%;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: #932263;
+	border-left-color: #932263;
+	}
+	}
+	* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none;align:center;}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/*.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  margin-left:0%;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}*/
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+	font
+	{
+	font-family:Calibri;
+	}
+	blink {
+    -webkit-animation: 2s linear infinite condemned_blink_effect;
+    animation: 2s linear infinite condemned_blink_effect;
+}
+@-webkit-keyframes condemned_blink_effect { 
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+@keyframes condemned_blink_effect {
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+.mySlides {display:none;}
+#m{
+margin-top: 2%;
+}
+l:hover{
+font-size:200px;
+}
+#n{
+margin-top: 3%;
+}
+#a{
+align:center;
+}
+#r{
+margin-top: 5%;
+}
+#q{
+margin-top: 5%;
+}
+#s{
+margin-top: 9%;
+}
+#center_list {
+margin: 0 auto;
+text-align: left;
+width: 500px;
+}
+k:hover
+{
+width:400px;
+height:auto;
+}
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+</style>
+</head>
+<body link="white" alink="white" vlink="white">
+
+<section data-parallax="scroll" data-image-src="image/bgimage4.jpg">
+<p class="topright"><font size="5px" color="white"><b><a href="#so" target="_self" ><u>Special Offers</u></a>|<a href="#contact" target="_self"> <u>Contact Us</u></a>| </b></font></p> 
+<img id="a" src="image/logo.png"/><br>
+<font color="white" size="200px"><b><l>WATCH ZONE</l></b></font>
+<br><BR><br><br>
+<font color="white" bgcolor="red" size="6px"><b>DLF MALL OF INDIA,NOIDA</b></font>
+<br><BR><br><br>
+<font color="white" bgcolor="red" size="6px"><b>"PASSIONATE ABOUT ELEGANCE"</b></font>
+</section>
+<section data-parallax="scroll" data-image-src="image/love.jpg">
+<marquee scrollamount="18" onmouseover="this.stop()" onmouseout="this.start()"><font color="white" face="Lucida Calligraphy" size="100%"><b><i>SPECIAL  COUPLE   WATCHES  FOR  VALENTINE'S  WEEK!!!!!!! 
+THIS  VALENTINE'S,  GIFT  YOURSELF  AND  YOUR  PARTNER  A  BEAUTIFUL  MEMORY  TO  BE  CHERISHED  FOREVER!!!!!</i></b></font></marquee>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<p align="center">
+<div class="w3-content w3-section" style="max-width:100%;max-height:100%">
+  <img class="mySlides" src="image/vwatch10.jpg" style="width:100%;height:840px;">
+  <img class="mySlides" src="image/vwatch20.jpg" style="width:100%;height:840px;">
+  <img class="mySlides" src="image/vwatch30.jpg" style="width:100%;height:840px;">
+    <img class="mySlides" src="image/vwatch40.jpg" style="width:100%;height:840px;">
+  <img class="mySlides" src="image/vwatch50.jpg" style="width:100%;height:840px;">
+  <img class="mySlides" src="image/vwatch60.jpg" style="width:100%;height:840px;">
+</div>
+</p>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); 
+}
+</script>
+</section>
+<a name="so"><p align="center"><blink><img src="image/so.jpg" width="400px" height="auto"></blink></p></a>
+<section data-parallax="scroll" data-image-src="image/bgimage.jpg">
+<img id="m" src="image/watch1.png" height="auto" width="30%" align="left"/>
+<b><font size="100px" align="centre" color="#1F063B">Skmei Analog-Digital Multi-Colour Dial Unisex Watch - 1117BBGREY</font>
+<br><br>
+<font size="5px">
+M.R.P.<strike color="red">2,399.00</strike><br/>
+Price:1515.00</b><br></font>
+<blink><font size="5px" color="red"><B>36% DISCOUNT</B></font></blink>
+<br><BR><font color="#45216D" size="5px"><b>
+<a1 href="#"><ul id="center_list">
+<li>Dial Color: Multi-Colour</li>
+<li>Band Color: Black</li>
+<li>Band Material: Silicon</li>
+<li>Watch Movement:Quartz</li>
+<li> Case Shape: Round</li>
+<li>6 months Warranty</li>
+</ul></a1></b></font>
+</section>
+
+<!--section2-->
+<section data-parallax="scroll" data-image-src="image/bgimage2.jpg">
+<img id="n" src="image/watch2.png" height="auto" width="30%" align="left"/>
+<b><font size="50%" align="centre" color="#091039"> Laurels February White Dial Analog Wrist Watch - For Women</font>
+<br><br>
+<font size="5px">
+M.R.P.<strike>1,999.00</strike><br/>
+Price:999.00</b></font>
+<br><br>
+<blink><font size="5px" color="red"><B>50% DISCOUNT</B></font></blink>
+<br/>
+<br/><font color="#0D1D81" size="5px"><b>
+<a1 href="#"><ul id="center_list">
+<li>Dial Color : White</li>
+<li>Dial Width: 20 MM</li>
+<li>Watch Movement: Quartz</li>
+<li>One Year Warranty</li>
+<li>Water Resistant</li>
+</ul></a1></b></font>
+</section>
+
+<!--section3-->
+<section data-parallax="scroll" data-image-src="image/bgimage7.jpg">
+<img id="q" src="image/watch3.png" width="30%" height="auto" align="left"/>
+<b><font size="50%" align="centre" color="#1F063B"> BLUE DIAMOND Analogue-Digital Black Dial Boys Watch-147852</font>
+<br><br>
+<font size="5px">
+M.R.P.<strike>995.00</strike><br/>
+Price:550.00</b></font>
+<br><br>
+<blink><font size="5px" color="red"><B>44% DISCOUNT</B></font></blink>
+<br/>
+<br/><font color="#45216D" size="5px"><b>
+<a1 href="#"><ul id="center_list">
+<li>Dial Shape: Round</li>
+<li>Strap color Black</li>
+<li>Strap Material Silicon</li>
+<li>Display: Digital-Analog</li>
+<li>hight quality</li>
+</ul></a1></b></font>
+</section>
+<!--section 4-->
+<section data-parallax="scroll" data-image-src="image/bgimage11.jpg">
+<img id="r" src="image/watch4.png" width="30%" height="auto" align="left"/>
+<b><font size="50%" align="centre" color="#091039"> Adamo Designer Couple Combo Analogue White Wrist Watch For Men And Women</font>
+<br><br>
+<font size="5px">
+M.R.P.<strike>2695.00</strike><br/>
+Price:1595.00</b></font>
+<br><br>
+<blink><font size="5px" color="red"><B>40% DISCOUNT</B></font></blink>
+<br/>
+<br/><font color="#0D1D81" size="5px"><b>
+<a1 href="#"><ul id="center_list">
+<li>Dial Color:WhiteCase</li>
+<li>Band Material:Metal</li>
+<li>Watch Display: Analog</li>
+<li>Case Material: Metal</li>
+<li>1 Year Warranty</li>
+</ul></a1></b></font>
+</section>
+
+<!--section5-->
+<section data-parallax="scroll" data-image-src="image/bgimage6.jpg">
+<img id="r" src="image/watch5.png" width="30%" height="auto" align="left"/>
+<b><font size="50%" align="centre" color="#1F063B"> Armado Combo of 3 analogue Black White dial Men Watch -AR-8010</font>
+<br><br>
+<font size="5px">
+M.R.P.<strike>3000.00</strike><br/>
+Price:1500.00</b></font>
+<br><br>
+<blink><font size="5px" color="red"><B>50% DISCOUNT</B></font></blink>
+<br/>
+<br/><font color="#45216D" size="5px"><b>
+<a1 href="#"><ul id="center_list">
+<li>Style: Wrist Watch</li>
+<li>Department: Men</li>
+<li>Combo Of 3 Watch</li>
+<li>Watch Display:Analogue</li>
+<li>1 year Warranty</li>
+</ul></a1></b></font>
+</section>
+
+<!--section6-->
+<section data-parallax="scroll" data-image-src="image/bgimage10.jpg">
+<img id="s" src="image/watch6.png"  width="30%" height="auto" align="left"/>
+<b><font size="50%" align="centre" color="#091039">Addic Digital Multi-functional Blue Outdoor Sports Watch for Men's & Boys </font>
+<br><br>
+<font size="5px">
+M.R.P.<strike>2299.00</strike><br/>
+Price:1599.00</b></font>
+<br><br>
+<blink><font size="5px" color="red"><B>30% DISCOUNT</B></font></blink>
+<br/>
+<br/>
+<font color="#0D1D81" size="5px"><b>
+<a1 href="#"><ul id="center_list">
+<li>Sport Watch</li>
+<li>COMFORT with FASHION</li> 
+<li>Watch Display : Analogue</li>
+<li>6 months Warranty</li>
+<li>Waterproof</li>
+<li>Dual Dial Sport Watch</li>
+</ul></a1></b></font>
+</section>
+<section data-parallax="scroll" data-image-src="image/bgimage26.jpg">
+<video src="video/final.mp4" type="video/mp4" autoplay loop></video>
+</section>
+<!--last section-->
+<section data-parallax="scroll" data-image-src="image/bgimage1.jpg">
+<font id="p" size="5em" color="white"><b>FOR MORE VARIETIES,VISIT THE STORE NOW!!!!</b></font>
+<br>
+<br>
+<br>
+<br>
+<marquee scrollamount="15" onmouseover="this.stop()" onmouseout="this.start()">
+<img src="image/watch1.jpg" height="150px" width="auto">
+<img src="image/watch2.jpg" height="150px" width="auto">
+<img src="image/watch3.jpg" height="150px" width="auto">
+<img src="image/watch4.jpg" height="150px" width="auto">
+<img src="image/watch5.jpg" height="150px" width="auto">
+<img src="image/watch6.jpg" height="150px" width="auto">
+<img src="image/watch7.jpg" height="150px" width="auto">
+<img src="image/watch8.jpg" height="150px" width="auto">
+<img src="image/watch9.jpg" height="150px" width="auto">
+<img src="image/watch10.jpg" height="150px" width="auto">
+<img src="image/watch11.jpg" height="150px" width="auto">
+<img src="image/watch12.jpg" height="150px" width="auto">
+<img src="image/vwatch1.jpg" height="150px" width="auto">
+<img src="image/vwatch2.jpg" height="150px" width="auto">
+<img src="image/vwatch4.jpg" height="150px" width="auto">
+<img src="image/vwatch3.jpg" height="150px" width="auto">
+<img src="image/vwatch5.jpg" height="150px" width="auto">
+<img src="image/vwatch7.jpg" height="150px" width="auto">
+</marquee>
+<br>
+<br>
+<br>
+<br>
+<font color="white"><font align="center" size="100px"><b><a name="contact">Contact Us</a></b></font>
+<br><br><font size="5px">
+Address:Shop No-7,First Floor,DLF Mall,Plot No – M 03, Sector 18, Noida, Uttar Pradesh 201301<br>
+Contact No:8373969039(RAKESH AHUJA),9212678347(SEEMA AHUJA)<br>
+Email:ahujas@gmail.com<br>
+Timings:11a.m.-8:00p.m.(7 Days Open)<br>
+</font>
+</section>
+</body>
+</html>
